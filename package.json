@@ -4,16 +4,21 @@
   "description": "CI/CD (Continuous Integration / Continuous Deployment) é um conjunto de práticas que automatiza o ciclo de vida do desenvolvimento de software, desde a integração do código até a entrega em produção.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "test": "jest --passWithNoTests --no-cache --runInBand",
+    "test:watch": "npm t -- --watch",
+    "test:coverage": "npm t -- --coverage"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.12.0",
     "@typescript-eslint/eslint-plugin": "^8.22.0",
     "@typescript-eslint/parser": "^8.22.0",
     "eslint": "^8.57.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"
   }
